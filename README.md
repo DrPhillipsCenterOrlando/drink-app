@@ -1,2 +1,2 @@
-staffapp
+Drink App
 ========
