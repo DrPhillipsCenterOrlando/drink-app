@@ -1,5 +1,5 @@
 //
-//  DAAppDelegate.h
+//  DPAppDelegate.h
 //  Drink App
 //
 //  Created by Nathan Edwards on 5/30/14.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DAAppDelegate : UIResponder <UIApplicationDelegate>
+@interface DPAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 

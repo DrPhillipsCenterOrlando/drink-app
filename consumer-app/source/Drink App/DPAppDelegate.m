@@ -1,14 +1,14 @@
 //
-//  DAAppDelegate.m
+//  DPAppDelegate.m
 //  Drink App
 //
 //  Created by Nathan Edwards on 5/30/14.
 //  Copyright (c) 2014 Dr Phillips Center. All rights reserved.
 //
 
-#import "DAAppDelegate.h"
+#import "DPAppDelegate.h"
 
-@implementation DAAppDelegate
+@implementation DPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

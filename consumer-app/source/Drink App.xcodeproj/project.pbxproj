@@ -13,7 +13,7 @@
 		8328AAA91939148D0072E8D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8328AAA81939148D0072E8D6 /* UIKit.framework */; };
 		8328AAAF1939148D0072E8D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8328AAAD1939148D0072E8D6 /* InfoPlist.strings */; };
 		8328AAB11939148D0072E8D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328AAB01939148D0072E8D6 /* main.m */; };
-		8328AAB51939148D0072E8D6 /* DAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328AAB41939148D0072E8D6 /* DAAppDelegate.m */; };
+		8328AAB51939148D0072E8D6 /* DPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328AAB41939148D0072E8D6 /* DPAppDelegate.m */; };
 		8328AAB71939148D0072E8D6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8328AAB61939148D0072E8D6 /* Images.xcassets */; };
 		8328AABE1939148D0072E8D6 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8328AABD1939148D0072E8D6 /* XCTest.framework */; };
 		8328AABF1939148D0072E8D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8328AAA41939148D0072E8D6 /* Foundation.framework */; };
@@ -43,8 +43,8 @@
 		8328AAAE1939148D0072E8D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8328AAB01939148D0072E8D6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8328AAB21939148D0072E8D6 /* Drink App-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Drink App-Prefix.pch"; sourceTree = "<group>"; };
-		8328AAB31939148D0072E8D6 /* DAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DAAppDelegate.h; sourceTree = "<group>"; };
-		8328AAB41939148D0072E8D6 /* DAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DAAppDelegate.m; sourceTree = "<group>"; };
+		8328AAB31939148D0072E8D6 /* DPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DPAppDelegate.h; sourceTree = "<group>"; };
+		8328AAB41939148D0072E8D6 /* DPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DPAppDelegate.m; sourceTree = "<group>"; };
 		8328AAB61939148D0072E8D6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8328AABC1939148D0072E8D6 /* Drink AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Drink AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8328AABD1939148D0072E8D6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -121,8 +121,8 @@
 		8328AAAA1939148D0072E8D6 /* Drink App */ = {
 			isa = PBXGroup;
 			children = (
-				8328AAB31939148D0072E8D6 /* DAAppDelegate.h */,
-				8328AAB41939148D0072E8D6 /* DAAppDelegate.m */,
+				8328AAB31939148D0072E8D6 /* DPAppDelegate.h */,
+				8328AAB41939148D0072E8D6 /* DPAppDelegate.m */,
 				8328AAB61939148D0072E8D6 /* Images.xcassets */,
 				8328AAAB1939148D0072E8D6 /* Supporting Files */,
 				83CED8DA1939170900662E72 /* Main.storyboard */,
@@ -205,7 +205,7 @@
 		8328AA991939148D0072E8D6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = DA;
+				CLASSPREFIX = DP;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Dr Phillips Center";
 				TargetAttributes = {
@@ -292,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8328AAB11939148D0072E8D6 /* main.m in Sources */,
-				8328AAB51939148D0072E8D6 /* DAAppDelegate.m in Sources */,
+				8328AAB51939148D0072E8D6 /* DPAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
