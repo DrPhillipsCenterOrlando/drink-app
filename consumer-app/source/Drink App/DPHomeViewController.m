@@ -1,32 +1,49 @@
 //
-//  DPLoginViewController.m
+//  DPHomeViewController.m
 //  Drink App
 //
 //  Created by Nathan Edwards on 5/31/14.
 //  Copyright (c) 2014 Dr Phillips Center. All rights reserved.
 //
 
-#import "DPLoginViewController.h"
 #import "DPHomeViewController.h"
+#import "DPLoginViewController.h"
 
-@interface DPLoginViewController ()
+@interface DPHomeViewController ()
 
-@property (strong, nonatomic) IBOutlet UITextField *lblUsername;
+@property (nonatomic) BOOL loggedIn;
 
 @end
 
-@implementation DPLoginViewController
+@implementation DPHomeViewController
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    if (!self.loggedIn)
+    {
+        [self.view setHidden:YES];
+        [self performSegueWithIdentifier:@"RequiresLogin" sender:self];
+        self.loggedIn = YES;
+    }
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"RequiresLogin"]) {
+        [[segue destinationViewController] setDelegate:self];
+        
+    }
+}
+
+- (void)userLoggedIn
+{
+    [self.view setHidden:NO];
 }
 
 /*
@@ -39,21 +56,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
-{
-    if ([self.lblUsername.text  isEqual: @"a"])
-    {
-        [self.lblUsername resignFirstResponder];
-        
-        [self.delegate userLoggedIn];
-        
-        [self dismissViewControllerAnimated:YES completion:nil];
-        
-        return YES;
-    }
-    
-    return NO;
-}
 
 @end

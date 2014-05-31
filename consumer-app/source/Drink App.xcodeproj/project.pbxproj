@@ -24,11 +24,12 @@
 		8328AAC01939148D0072E8D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8328AAA81939148D0072E8D6 /* UIKit.framework */; };
 		8328AAC81939148D0072E8D6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8328AAC61939148D0072E8D6 /* InfoPlist.strings */; };
 		8328AACA1939148D0072E8D6 /* Drink_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8328AAC91939148D0072E8D6 /* Drink_AppTests.m */; };
-		836953481939423000EC3ED6 /* DPRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 836953471939423000EC3ED6 /* DPRootViewController.m */; };
 		8369534B193942B600EC3ED6 /* DPData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83695349193942B600EC3ED6 /* DPData.xcdatamodeld */; };
 		83CED8DB1939170900662E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CED8DA1939170900662E72 /* Main.storyboard */; };
 		83CED8DD193938AA00662E72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CED8DC193938AA00662E72 /* CoreLocation.framework */; };
 		83F69C5B193A063C007F8DF5 /* DPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F69C5A193A063C007F8DF5 /* DPLoginViewController.m */; };
+		83F69C5E193A0B07007F8DF5 /* DPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F69C5D193A0B07007F8DF5 /* DPHomeViewController.m */; };
+		83F69C61193A1AD4007F8DF5 /* DPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F69C60193A1AD4007F8DF5 /* DPNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,14 +64,16 @@
 		8328AAC51939148D0072E8D6 /* Drink AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Drink AppTests-Info.plist"; sourceTree = "<group>"; };
 		8328AAC71939148D0072E8D6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8328AAC91939148D0072E8D6 /* Drink_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Drink_AppTests.m; sourceTree = "<group>"; };
-		836953461939423000EC3ED6 /* DPRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPRootViewController.h; sourceTree = "<group>"; };
-		836953471939423000EC3ED6 /* DPRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPRootViewController.m; sourceTree = "<group>"; };
 		8369534A193942B600EC3ED6 /* DPData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DPData.xcdatamodel; sourceTree = "<group>"; };
 		83CED8DA1939170900662E72 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		83CED8DC193938AA00662E72 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		83CED8DE193938B100662E72 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		83F69C59193A063C007F8DF5 /* DPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoginViewController.h; sourceTree = "<group>"; };
 		83F69C5A193A063C007F8DF5 /* DPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginViewController.m; sourceTree = "<group>"; };
+		83F69C5C193A0B07007F8DF5 /* DPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPHomeViewController.h; sourceTree = "<group>"; };
+		83F69C5D193A0B07007F8DF5 /* DPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPHomeViewController.m; sourceTree = "<group>"; };
+		83F69C5F193A1AD4007F8DF5 /* DPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPNavigationController.h; sourceTree = "<group>"; };
+		83F69C60193A1AD4007F8DF5 /* DPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPNavigationController.m; sourceTree = "<group>"; };
 		9B9AB3CA1FBF45C8AD4C0DFC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D099911F214337946F612C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -183,10 +186,12 @@
 			isa = PBXGroup;
 			children = (
 				83CED8DA1939170900662E72 /* Main.storyboard */,
-				836953461939423000EC3ED6 /* DPRootViewController.h */,
-				836953471939423000EC3ED6 /* DPRootViewController.m */,
+				83F69C5F193A1AD4007F8DF5 /* DPNavigationController.h */,
+				83F69C60193A1AD4007F8DF5 /* DPNavigationController.m */,
 				83F69C59193A063C007F8DF5 /* DPLoginViewController.h */,
 				83F69C5A193A063C007F8DF5 /* DPLoginViewController.m */,
+				83F69C5C193A0B07007F8DF5 /* DPHomeViewController.h */,
+				83F69C5D193A0B07007F8DF5 /* DPHomeViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -355,9 +360,10 @@
 				8328AAB11939148D0072E8D6 /* main.m in Sources */,
 				8369534B193942B600EC3ED6 /* DPData.xcdatamodeld in Sources */,
 				8303F17C1939BA1700671D36 /* DPLocation.m in Sources */,
+				83F69C61193A1AD4007F8DF5 /* DPNavigationController.m in Sources */,
 				8328AAB51939148D0072E8D6 /* DPAppDelegate.m in Sources */,
+				83F69C5E193A0B07007F8DF5 /* DPHomeViewController.m in Sources */,
 				83F69C5B193A063C007F8DF5 /* DPLoginViewController.m in Sources */,
-				836953481939423000EC3ED6 /* DPRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

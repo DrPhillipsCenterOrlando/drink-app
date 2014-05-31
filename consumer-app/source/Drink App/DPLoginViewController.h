@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DPLoginViewController : UIViewController <UITextFieldDelegate>
+@protocol DPLoginDelegate;
+
+@interface DPLoginViewController: UIViewController <UITextFieldDelegate>
+
+@property (nonatomic, weak) id<DPLoginDelegate> delegate;
+
+@end
+
+@protocol DPLoginDelegate <NSObject>
+@required
+-(void)userLoggedIn;
 
 @end
