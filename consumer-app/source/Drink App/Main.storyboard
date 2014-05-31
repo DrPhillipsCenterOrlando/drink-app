@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Cool stuff-->
+        <!--View Controller-->
         <scene sceneID="hGP-TY-az1">
             <objects>
                 <viewController id="v2D-zn-x15" sceneMemberID="viewController">
@@ -40,7 +40,7 @@
                             <constraint firstAttribute="trailing" secondItem="7Iy-j4-pbA" secondAttribute="trailing" constant="20" id="jpN-kL-Xsa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Cool stuff" id="NUW-1q-OjK"/>
+                    <navigationItem key="navigationItem" id="NUW-1q-OjK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XpA-hv-hf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

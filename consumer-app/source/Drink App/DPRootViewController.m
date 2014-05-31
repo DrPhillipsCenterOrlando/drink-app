@@ -15,6 +15,12 @@
 
 @implementation DPRootViewController
 
+- (void) viewWillAppear:(BOOL)animated
+{
+    UIImage *image = [UIImage imageNamed:@"navigation-bar.png"];
+    [[UINavigationBar appearance] setBackgroundImage:image forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
