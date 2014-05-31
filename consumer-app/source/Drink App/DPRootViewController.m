@@ -10,7 +10,14 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 #import <CoreLocation/CoreLocation.h>
 
+#define SERVICE_UUID @"3A2B084A-57C4-4312-9E9E-81C90B155D19"
+#define CHARACTERISTIC_UUID @"FE9B56BF-64E1-4375-8818-B7377701CC7A"
+
 @interface DPRootViewController ()
+
+@property (strong, nonatomic) CBPeripheralManager *peripheralManager;
+@property (strong, nonatomic) CBMutableCharacteristic *transferCharacteristic;
+@property (nonatomic, strong) NSMutableArray *centrals;
 
 @end
 
@@ -20,46 +27,51 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    // init the peripheral manager and array for connected centrals
+    
+    _peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
+    
+    _centrals = [NSMutableArray array];
 }
 
-- (void)didReceiveMemoryWarning
+- (void)viewWillDisappear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // stop advertising when view will disappear
+    
+    [self.peripheralManager stopAdvertising];
+    self.peripheralManager = nil;
+    
+    [super viewWillDisappear:animated];
 }
 
-- (void)initBeacon
-{
-    NSUUID *proximityUUID = [[NSUUID alloc] initWithUUIDString:@"018634C9-AAD4-4040-A565-527F2484E017"];
-    
-    // Create the beacon region.
-    CLBeaconRegion *beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:proximityUUID identifier:@"com.dp.device"];
-    
-    NSDictionary *beaconPeripheralData = [beaconRegion peripheralDataWithMeasuredPower:nil];
-    
-    // Create the peripheral manager.
-    CBPeripheralManager *peripheralManager = [[CBPeripheralManager alloc] initWithDelegate:self queue:nil options:nil];
-    
-    // Start advertising your beacon's data.
-    [peripheralManager startAdvertising:beaconPeripheralData];
-}
-
-#pragma mark CBPeripheralManagerDelegate implementation
+#pragma mark - CBPeripheral delegate methods
 
 - (void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
 {
+    if (peripheral.state != CBPeripheralManagerStatePoweredOn) {
+        return;
+    }
     
+    NSLog(@"PeripheralManager powered on.");
+    
+    self.transferCharacteristic = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString: CHARACTERISTIC_UUID] properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsReadable];
+    
+    CBMutableService *transferService = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:SERVICE_UUID] primary:YES];
+    
+    transferService.characteristics = @[self.transferCharacteristic];
+    
+    [self.peripheralManager addService:transferService];
+    
+    [self.peripheralManager startAdvertising:@{ CBAdvertisementDataServiceUUIDsKey : @[[CBUUID UUIDWithString:SERVICE_UUID]], CBAdvertisementDataLocalNameKey : @"EstimoteBeacon" }];
+    
+    NSLog(@"PeripheralManager is broadcasting (%@).", SERVICE_UUID);
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void)peripheralManager:(CBPeripheralManager *)peripheral central:(CBCentral *)central didSubscribeToCharacteristic:(CBCharacteristic *)characteristic
 {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    [_centrals addObject:central];
 }
-*/
 
 @end

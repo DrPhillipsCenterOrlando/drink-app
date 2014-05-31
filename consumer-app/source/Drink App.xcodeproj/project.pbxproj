@@ -241,6 +241,13 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Dr Phillips Center";
 				TargetAttributes = {
+					8328AAA01939148D0072E8D6 = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
+					};
 					8328AABB1939148D0072E8D6 = {
 						TestTargetID = 8328AAA01939148D0072E8D6;
 					};
