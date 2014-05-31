@@ -8,6 +8,7 @@
 
 #import "DPLocation.h"
 #import <CoreLocation/CoreLocation.h>
+#import <AFNetworking/AFNetworking.h>
 
 #define APP_UUID "3A2B084A-57C4-4312-9E9E-81C90B155D19"
 
@@ -103,6 +104,27 @@
     
     // send Put with username, foundBeacon.proximity, foundBeacon.accuracy;
     NSLog(@"username : %lld : %f", (long long)foundBeacon.proximity, foundBeacon.accuracy);
+    
+    NSNumber *acc = [NSNumber numberWithDouble:foundBeacon.accuracy];
+    
+    
+    AFHTTPRequestOperationManager *requestManager = [AFHTTPRequestOperationManager manager];
+    requestManager.requestSerializer = [AFJSONRequestSerializer serializer];
+    
+    NSMutableDictionary *parameters = [[NSMutableDictionary alloc] init];
+    [parameters setValue:@"nate" forKey:@"userName"];
+    //[parameters setValue:foundBeacon.proximity forKey:@"proximity"];
+    [parameters setValue:acc forKey:@"accuracy"];
+    
+    [requestManager PUT:@"https://dpstaff-node-c9-nwesoccer.c9.io" parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject)
+         {
+             
+         }
+          failure:^(AFHTTPRequestOperation *operation, NSError *error)
+         {
+             
+         }
+     ];
 }
 
 - (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error
