@@ -7,9 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreBluetooth/CoreBluetooth.h>
-#import <CoreLocation/CoreLocation.h>
 
-@interface DPRootViewController : UINavigationController <CBPeripheralManagerDelegate>
+@interface DPRootViewController : UINavigationController
 
 @end

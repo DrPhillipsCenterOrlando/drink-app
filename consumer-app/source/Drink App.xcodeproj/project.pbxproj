@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		38F1A41ADE474A7E979DC6E1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B9AB3CA1FBF45C8AD4C0DFC /* libPods.a */; };
+		8303F1791939B57A00671D36 /* fence.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8303F1781939B57A00671D36 /* fence.plist */; };
+		8303F17C1939BA1700671D36 /* DPLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8303F17B1939BA1700671D36 /* DPLocation.m */; };
 		8328AAA51939148D0072E8D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8328AAA41939148D0072E8D6 /* Foundation.framework */; };
 		8328AAA71939148D0072E8D6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8328AAA61939148D0072E8D6 /* CoreGraphics.framework */; };
 		8328AAA91939148D0072E8D6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8328AAA81939148D0072E8D6 /* UIKit.framework */; };
@@ -37,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8303F1781939B57A00671D36 /* fence.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = fence.plist; sourceTree = "<group>"; };
+		8303F17A1939BA1700671D36 /* DPLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLocation.h; sourceTree = "<group>"; };
+		8303F17B1939BA1700671D36 /* DPLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLocation.m; sourceTree = "<group>"; };
 		8328AAA11939148D0072E8D6 /* Drink App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Drink App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8328AAA41939148D0072E8D6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8328AAA61939148D0072E8D6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -143,6 +148,8 @@
 				8328AAAD1939148D0072E8D6 /* InfoPlist.strings */,
 				8328AAB01939148D0072E8D6 /* main.m */,
 				8328AAB21939148D0072E8D6 /* Drink App-Prefix.pch */,
+				8303F17A1939BA1700671D36 /* DPLocation.h */,
+				8303F17B1939BA1700671D36 /* DPLocation.m */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -179,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				83695349193942B600EC3ED6 /* DPData.xcdatamodeld */,
+				8303F1781939B57A00671D36 /* fence.plist */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -244,7 +252,7 @@
 					8328AAA01939148D0072E8D6 = {
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -278,6 +286,7 @@
 			files = (
 				83CED8DB1939170900662E72 /* Main.storyboard in Resources */,
 				8328AAAF1939148D0072E8D6 /* InfoPlist.strings in Resources */,
+				8303F1791939B57A00671D36 /* fence.plist in Resources */,
 				8328AAB71939148D0072E8D6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +341,7 @@
 			files = (
 				8328AAB11939148D0072E8D6 /* main.m in Sources */,
 				8369534B193942B600EC3ED6 /* DPData.xcdatamodeld in Sources */,
+				8303F17C1939BA1700671D36 /* DPLocation.m in Sources */,
 				8328AAB51939148D0072E8D6 /* DPAppDelegate.m in Sources */,
 				836953481939423000EC3ED6 /* DPRootViewController.m in Sources */,
 			);
