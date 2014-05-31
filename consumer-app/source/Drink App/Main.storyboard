@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="hGP-TY-az1">
             <objects>
-                <viewController id="v2D-zn-x15" sceneMemberID="viewController">
+                <viewController id="v2D-zn-x15" customClass="DPLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rTd-o3-nO6"/>
                         <viewControllerLayoutGuide type="bottom" id="46h-Ds-dPu"/>
@@ -22,7 +22,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="go"/>
                                 <connections>
-                                    <segue destination="6Nr-hq-4iE" kind="push" id="3fV-e4-FDx"/>
+                                    <outlet property="delegate" destination="v2D-zn-x15" id="qe3-Zf-Mfz"/>
+                                    <segue destination="6Nr-hq-4iE" kind="push" identifier="EnterApp" id="3fV-e4-FDx"/>
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="This is your personal mobile app for your doc experience" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dae-e9-y07">
@@ -41,6 +42,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NUW-1q-OjK"/>
+                    <connections>
+                        <outlet property="lblUsername" destination="7Iy-j4-pbA" id="9ch-XA-6Sd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XpA-hv-hf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

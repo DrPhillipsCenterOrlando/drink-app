@@ -28,6 +28,7 @@
 		8369534B193942B600EC3ED6 /* DPData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 83695349193942B600EC3ED6 /* DPData.xcdatamodeld */; };
 		83CED8DB1939170900662E72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83CED8DA1939170900662E72 /* Main.storyboard */; };
 		83CED8DD193938AA00662E72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83CED8DC193938AA00662E72 /* CoreLocation.framework */; };
+		83F69C5B193A063C007F8DF5 /* DPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F69C5A193A063C007F8DF5 /* DPLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,8 @@
 		83CED8DA1939170900662E72 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		83CED8DC193938AA00662E72 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		83CED8DE193938B100662E72 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		83F69C59193A063C007F8DF5 /* DPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPLoginViewController.h; sourceTree = "<group>"; };
+		83F69C5A193A063C007F8DF5 /* DPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPLoginViewController.m; sourceTree = "<group>"; };
 		9B9AB3CA1FBF45C8AD4C0DFC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D099911F214337946F612C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,6 +185,8 @@
 				83CED8DA1939170900662E72 /* Main.storyboard */,
 				836953461939423000EC3ED6 /* DPRootViewController.h */,
 				836953471939423000EC3ED6 /* DPRootViewController.m */,
+				83F69C59193A063C007F8DF5 /* DPLoginViewController.h */,
+				83F69C5A193A063C007F8DF5 /* DPLoginViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 				8369534B193942B600EC3ED6 /* DPData.xcdatamodeld in Sources */,
 				8303F17C1939BA1700671D36 /* DPLocation.m in Sources */,
 				8328AAB51939148D0072E8D6 /* DPAppDelegate.m in Sources */,
+				83F69C5B193A063C007F8DF5 /* DPLoginViewController.m in Sources */,
 				836953481939423000EC3ED6 /* DPRootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
