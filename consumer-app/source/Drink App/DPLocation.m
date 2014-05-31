@@ -101,24 +101,8 @@
 {
     CLBeacon *foundBeacon = [beacons firstObject];
     
-    switch (foundBeacon.proximity)
-    {
-        case CLProximityImmediate:
-            NSLog(@"Immediate");
-            break;
-            
-        case CLProximityNear:
-            NSLog(@"Near");
-            break;
-            
-        case CLProximityFar:
-            NSLog(@"Far");
-            break;
-            
-        default:
-            NSLog(@"Unknown Proximity");
-            break;
-    }
+    // send Put with username, foundBeacon.proximity, foundBeacon.accuracy;
+    NSLog(@"username : %lld : %f", (long long)foundBeacon.proximity, foundBeacon.accuracy);
 }
 
 - (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error
